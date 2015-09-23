@@ -5,12 +5,21 @@
 <div class="row">
   <div class="col-md-8"><p><%= image_tag @image.url %></p><p><%= @image.description %></p></div>
   <div class="col-md-4">
-    <h3>Tags</h3><ul>
-    <% @image.tag_list.each do |t| -%>
+    <h3>Tags</h3>
+    <ul><% @image.tag_list.each do |t| -%>
       <li><%= link_to t, controller: :tags, action: :tag, id: t %></li>
     <% end -%></ul>
+    <h4>Add...</h4>
+    <p><%= text_field_tag(:new_tag, nil, size: 30, class: ['form-control', 'tagsearch', 'typeahead']) %></p>
   </div>
 </div>
+
+<script>
+$('.tagsearch').typeahead(null, {
+  displayKey: 'tags',
+  source: tags.ttAdapter()
+});
+</script>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
