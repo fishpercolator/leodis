@@ -8,9 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <h1>Leodis!</h1>
-    <%= yield %>
+  <div class="wrapper">
+    <%= render 'layouts/navbar' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+    <div class="push"></div>
   </div>
 
 </body>

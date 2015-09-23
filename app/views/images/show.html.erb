@@ -10,7 +10,7 @@
       <li><%= link_to t, controller: :tags, action: :tag, id: t %></li>
     <% end -%></ul>
     <h4>Add...</h4>
-    <p><%= text_field_tag(:new_tag, nil, size: 30, class: ['form-control', 'tagsearch', 'typeahead']) %></p>
+    <p><%= text_field_tag(:new_tag, nil, size: 30, class: ['tagsearch', 'typeahead']) %></p>
   </div>
 </div>
 
