@@ -17,7 +17,12 @@
 <script>
 $('.tagsearch').typeahead(null, {
   displayKey: 'tag',
-  source: tags.ttAdapter()
+  source: tags.ttAdapter(),
+  templates: {
+    suggestion: function (tag) {
+      return '<p>' + tag.tag + ' (' + tag.count + ')</p>';
+    }
+  }
 });
 </script>
 
