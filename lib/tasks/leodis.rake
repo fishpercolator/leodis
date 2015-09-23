@@ -4,7 +4,7 @@ require 'pry'
 namespace :leodis do
   desc "TODO"
   task scrape: :environment do
-    (5000..5500).each do |n|
+    (5000..6000).each do |n|
       p n
       begin
         file = open("http://www.leodis.net/display.aspx?resourceIdentifier=#{n}", "Accept-Encoding" => "plain")

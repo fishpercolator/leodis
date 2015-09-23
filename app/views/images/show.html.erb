@@ -7,7 +7,7 @@
   <div class="col-md-4">
     <h3>Tags</h3><ul>
     <% @image.tag_list.each do |t| -%>
-      <li><%= t %></li>
+      <li><%= link_to t, controller: :tags, action: :tag, id: t %></li>
     <% end -%></ul>
   </div>
 </div>

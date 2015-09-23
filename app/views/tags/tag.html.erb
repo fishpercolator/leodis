@@ -1,0 +1,13 @@
+<h2>Tag '<%= @tag %>'</h2>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Thumbnail</th>
+  </tr>
+  <% @images.each do |i| -%>
+  <tr>
+    <td><%= link_to i.title, i %></td>
+    <td><%= link_to image_tag(i.url, class: 'thumb'), i %></td>
+  </tr>
+  <% end -%>
+</table>
