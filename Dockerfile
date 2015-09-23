@@ -9,7 +9,7 @@ ADD http://ftp.uk.debian.org/debian/pool/main/p/phantomjs/phantomjs_1.9.0-1+b1_a
 RUN dpkg -i /tmp/phantomjs_1.9.0-1+b1_amd64.deb
 RUN gem install bundler
 
-ENV APP_HOME        /usr/src/ineedfiles
+ENV APP_HOME        /usr/src/leodis
 ENV RAILS_ENV       production
 ENV APPHOST         localhost:3000
 # NOTE: ALWAYS override this or your sessions will be insecure!
