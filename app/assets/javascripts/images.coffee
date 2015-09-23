@@ -2,13 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 window.tags = new Bloodhound {
-  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('tags'),
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('tag'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  local: [
-    { tags: 'the headrow' },
-    { tags: 'trinity' },
-    { tags: 'roundhay park' }
-  ]
+  local: window.gon.tags
 }
 
 window.tags.initialize()
