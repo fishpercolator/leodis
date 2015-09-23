@@ -10,7 +10,6 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
-    gon.tags = Image.tag_counts.sort_by(&:taggings_count).reverse.map {|s| {'tag' => s.name, 'count' => s.taggings_count } }
   end
 
   # GET /images/new
